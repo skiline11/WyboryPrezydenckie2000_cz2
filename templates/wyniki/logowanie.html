@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html xmlns:width="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Moj Tytul</title>
+    <meta charset="utf-8"/>
+</head>
+
+<body>
+<div style="text-align: center; font-size: 50px">
+    <form action="{% url 'polska' %}" method="post">
+        {% csrf_token %}
+        PODAJ LOGIN:<br>
+        <input style="font-size: 50px; text-align: center; margin: 30px" type="text" placeholder="Enter Username" name="username" required>
+        <br>
+        PODAJ HASŁO:<br>
+        <input style="font-size: 50px; text-align: center; margin: 30px" type="password" placeholder="Enter Password" name="password" required>
+        <br><br>
+        <input style="font-size: 50px" type="submit" value="Zaloguj">
+    </form>
+
+</div>
+
+</body>

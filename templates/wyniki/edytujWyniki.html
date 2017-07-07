@@ -1,0 +1,82 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html xmlns:width="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Moj Tytul</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="{% static "css/style.css" %}?{% now "U" %}" type="text/css"/>
+
+    <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+    <script src="https://www.amcharts.com/lib/3/maps/js/polandHigh.js"></script>
+
+    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all"/>
+    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+
+</head>
+
+<body>
+
+<script type="text/javascript" src="{% static adres_js %}"></script>
+
+<div id="container">
+    {% include "wyniki/logoAndNavigation.html" %}
+
+    <div id="content">
+
+        <div id="wyniki_kandydatow">
+            <div id="wyniki">
+                <table>
+                    <tr>
+                        <td>
+                            <form action="{% url 'gmi' wojewodztwo=wojewodztwo okreg=okreg powiat=powiat gmina=gmina %}" method="post">
+                                {% csrf_token %}
+
+                                {
+{#                                <table>#}
+{#                                    <tr class="wiersz_glowny">#}
+{#                                        <td class="kol1">Kandydat</td>#}
+{#                                        <td class="kol2">Liczba głosów oddanych na kandydata</td>#}
+{#                                    </tr>#}
+{#                                    {% for x in dane %}#}
+{#                                        <tr class="wiersz1">#}
+{#                                            <td class="kol1">{{ x.parzyste.kandydat.imieINazwisko }}</td>#}
+{#                                            <td class="kol2">#}
+{#                                                <input style="text-align: center"#}
+{#                                                       type="text"#}
+{#                                                       name={{ x.parzyste.kandydat.numerKandydata }}#}
+{#                                                       value={{ x.parzyste.glosy }}#}
+{#                                                required>#}
+{#                                            </td>#}
+{#                                        </tr>#}
+{#                                        <tr class="wiersz2">#}
+{#                                            <td class="kol1">{{ x.nieparzyste.kandydat.imieINazwisko }}</td>#}
+{#                                            <td class="kol2">#}
+{#                                                <input style="text-align: center"#}
+{#                                                       type="text"#}
+{#                                                       name={{ x.nieparzyste.kandydat.numerKandydata }}#}
+{#                                                       value={{ x.nieparzyste.glosy }}#}
+{#                                                required>#}
+{#                                            </td>#}
+{#                                        </tr>#}
+{#                                    {% endfor %}#}
+{#                                    <tr>#}
+{#                                        <td colspan="2"><input type="submit" value="Zapisz" /></td>#}
+{#                                        <td colspan="2"><button type="submit" class="sace btn btn-default" style="width: 400px">Save</button></td>#}
+{#                                    </tr>#}
+{#                                </table>#}
+
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

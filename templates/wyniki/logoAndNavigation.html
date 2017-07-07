@@ -1,0 +1,40 @@
+{% load static %}
+
+<div id="logo" style="width: 100%">
+    <a href="{% url 'polska' %}"><img src="{% static "img/logo3.jpg "%}" class="img-responsive" alt="face" style="width: 100%"></a>
+
+{#    <div style="position: absolute; left: 50px; top: 200px">ABC</div>#}
+</div>
+
+<div id="nav" style="clear: both">
+    <ul>
+        <li style="background-color: aquamarine"><p>
+            <a href="{% url 'logowanie' %}" style="text-decoration: none">WYLOGUJ</a>
+        </p></li>
+        <li><p>Statystyki ogolne</p></li>
+        <li><p>Zwycięzki kandydat</p></li>
+        <li><p>Według rodzaju obwodu</p></li>
+        <li><p>W mieście i na wsi</p></li>
+        <li><p>Za granica</p></li>
+    </ul>
+</div>
+
+<div id="wyszukiwarka" style="width: 100%; background-color : red; font-size: 20px">
+    <table style="width: 100%;">
+        <tr>
+            <form action="{% url 'wyszukiwarka' %}" method="post">
+                {% csrf_token %}
+            <td style="color: white; text-align: center; padding-left: 50px">Wyszukiwarka</td>
+
+            <td style="text-align: center"><input type="text" placeholder="wojewodztwo" name="wojewodztwo" value=""></td>
+            <td style="text-align: center"><input type="text" placeholder="okreg" name="okreg" value=""></td>
+            <td style="text-align: center"><input type="text" placeholder="powiat" name="powiat" value=""></td>
+            <td style="text-align: center"><input type="text" placeholder="gmina" name="gmina" value=""></td>
+
+            <td style="text-align: center"><input type="submit" value="SZUKAJ"></td>
+
+            </form>
+
+        </tr>
+    </table>
+</div>

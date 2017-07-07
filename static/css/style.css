@@ -1,0 +1,115 @@
+body{
+    background-color: azure ;
+}
+
+
+#container{
+    width:100%;
+}
+
+#logo{
+
+}
+
+#nav{
+    width:100%;
+    text-align: center;
+    border-bottom: solid 1px;
+}
+
+#nav > ul > li{
+    display: inline-block;
+    width: 16%;
+}
+
+#nav > ul > li:hover{
+    background-color: aqua;
+}
+
+#contant{
+    width:100%;
+}
+
+#wyniki_kandydatow{
+    vertical-align: middle;
+    padding: 20px;
+    /*height: 900px;*/
+}
+
+#wyniki{
+    float:left;
+    text-align: center;
+    width:40%;
+}
+
+#tabela_wyniki{
+    width: 100%;
+}
+
+.wiersz_glowny{
+    background-color: aquamarine;
+    height: 60px;
+    font-size: 25px;
+}
+
+.wiersz1{
+    background-color: white;
+    height: 60px;
+    text-align: center;
+}
+
+.wiersz2{
+    background-color: lightgray;
+    height: 60px;
+    text-align: center;
+}
+
+#pole_wykresu{
+    float:left;
+    width:60%;
+    /*height: 900px;*/
+}
+
+#wykres_kolumnowy{
+    width: 100%;
+    /*height: 900px;*/
+}
+
+.amcharts-export-menu-top-right {
+  top: 10px;
+  right: 0;
+}
+
+
+#statystyki_i_frekfencja{
+    clear: both;
+    height: 700px;
+    padding: 20px;
+}
+
+#statystyki{
+    float:left;
+    width:50%;
+}
+
+#statystyki_tabela{
+    width: 100%;
+}
+
+#mapa{
+    float:left;
+    width:50%;
+    height: 700px;
+}
+
+#footer{
+    clear:both;
+    width:100%;
+    /*display: inline-block;*/
+    align-content: center;
+}
+
+#footer > div{
+    /*display: inline-block;*/
+    vertical-align: center;
+}
